@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/12/2018 16:48:24 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Tiposuelo" table="tiposuelo" catalog="empresa_campos" optimistic-lock="version">
+        <id name="idTiposuelo" type="java.lang.Integer">
+            <column name="id_tiposuelo" />
+            <generator class="identity" />
+        </id>
+        <property name="nombreTiposuelo" type="string">
+            <column name="nombre_tiposuelo" length="60" />
+        </property>
+        <property name="caracteristicasTiposuelo" type="string">
+            <column name="caracteristicas_tiposuelo" length="80" />
+        </property>
+        <property name="observacionTiposuelo" type="string">
+            <column name="observacion_tiposuelo" length="80" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

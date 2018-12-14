@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/12/2018 16:48:24 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Campo" table="campo" catalog="empresa_campos" optimistic-lock="version">
+        <id name="idCampo" type="java.lang.Integer">
+            <column name="id_campo" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="80" />
+        </property>
+        <property name="superficie" type="java.lang.Integer">
+            <column name="superficie" />
+        </property>
+        <property name="idEstado" type="java.lang.Integer">
+            <column name="id_estado" />
+        </property>
+    </class>
+</hibernate-mapping>

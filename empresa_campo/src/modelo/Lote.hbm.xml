@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/12/2018 16:48:24 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Lote" table="lote" catalog="empresa_campos" optimistic-lock="version">
+        <id name="idLote" type="java.lang.Integer">
+            <column name="id_lote" />
+            <generator class="identity" />
+        </id>
+        <property name="numeroLote" type="string">
+            <column name="numero_lote" length="20" />
+        </property>
+        <property name="superficieLote" type="int">
+            <column name="superficie_lote" not-null="true" />
+        </property>
+        <property name="idTiposuelo" type="int">
+            <column name="id_tiposuelo" not-null="true" />
+        </property>
+        <property name="idCampo" type="int">
+            <column name="id_campo" not-null="true" />
+        </property>
+        <property name="observaciones" type="string">
+            <column name="observaciones" length="80" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
